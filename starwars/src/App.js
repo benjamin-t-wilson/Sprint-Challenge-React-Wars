@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 import axios from "axios";
 import PeopleCard from "./components/PeopleCard.js";
 
@@ -18,7 +18,6 @@ const App = () => {
       .get("https://swapi.co/api/people/")
       .then(response => {
         setPeopleState(response.data.results);
-        console.log(response.data.results);
       })
       .catch(error => {
         console.log("error", error);
